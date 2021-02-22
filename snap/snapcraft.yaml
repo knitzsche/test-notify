@@ -16,12 +16,12 @@ apps:
 
   notify:
     daemon: notify
-    command: bin/daemon-notify
+    command: bin/daemon-notify-wrapper.sh
     plugs: [ daemon-notify ]
 
 parts:
-  bin:
-    source: bin
+  launchers:
+    source: launchers
     plugin: dump
   daemon:
     source: .
