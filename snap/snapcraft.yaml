@@ -20,9 +20,6 @@ apps:
     plugs: [ daemon-notify ]
 
 parts:
-  bin:
-    source: bin
-    plugin: dump
   daemon:
     source: .
     plugin: go
