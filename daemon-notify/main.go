@@ -20,7 +20,9 @@ func main() {
 		}
 		time.Sleep(1 * time.Second)
 	}
+	fmt.Printf("==== %s.notify ABOUT TO NOTIFY\n", snap)
 	sdnotify.SdNotify("READY=1")
+	fmt.Printf("==== %s.notify NOTIFY COMPLETED\n", snap)
 
 	time.Sleep(5 * time.Second)
 }

@@ -1,4 +1,4 @@
-module github.com/knitzsche/test-notife
+module github.com/knitzsche/test-notify
 
 go 1.15
 
