@@ -1,5 +1,5 @@
 name: test-notify
-base: core18 
+base: core20 
 version: '0.1'
 summary: Test snapcraft systemd watchdog oneshot
 description: |
@@ -20,8 +20,10 @@ apps:
     plugs: [ daemon-notify ]
 
 parts:
+  bin:
+    source: bin
+    plugin: dump
   daemon:
     source: .
     plugin: go
-    go-importpath: test-notify
     build-packages: [ gcc ]
