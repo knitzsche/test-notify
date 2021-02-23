@@ -17,7 +17,7 @@ apps:
   notify:
     daemon: notify
     command: bin/daemon-notify-wrapper.sh
-    plugs: [ daemon-notify ]
+    plugs: [ daemon-notify,  network-control ]
 
 parts:
   launchers:
