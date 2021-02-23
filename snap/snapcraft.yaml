@@ -9,10 +9,10 @@ grade: devel
 confinement: strict
 
 apps:
-  no-notify:
-    daemon: notify
-    command: bin/daemon-no-notify
-    plugs: [ daemon-notify ]
+  after:
+    daemon: simple
+    command: bin/after.sh
+    after: [ notify ]
 
   notify:
     daemon: notify
