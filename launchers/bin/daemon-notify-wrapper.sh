@@ -1,2 +1,4 @@
 #!/bin/bash
-$SNAP/bin/daemon-notify
+PID=$$
+echo "$PID" > ${SNAP_COMMON}/notify-pid
+$SNAP/bin/daemon-notify.sh
